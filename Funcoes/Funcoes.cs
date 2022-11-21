@@ -31,7 +31,7 @@ namespace Funcoes
             Console.WriteLine();
 
             Console.WriteLine("Confirma inclusão?");
-            Console.WriteLine("Nome            : " + nome + " " + sobreNome);
+            Console.WriteLine("Nome           : " + nome + " " + sobreNome);
             Console.WriteLine("Data nascimento: {0:d}", dataNascimento);
             Console.WriteLine("1 - Sim");
             Console.WriteLine("2 - Não");
@@ -43,7 +43,6 @@ namespace Funcoes
                 pessoa.sobrenome = sobreNome;
                 pessoa.dataNascimento = dataNascimento;
                 repositorio.AdicionarPessoa(pessoa);
-                //                PessoaList.Add(new Pessoa(nome,sobreNome,dataNascimento));
             }
         }
 
@@ -100,9 +99,10 @@ namespace Funcoes
                 int diasFaltantes = pessoa.calculaDiasFaltantes();
                 Console.WriteLine(diasFaltantes == 0 ? "É HOJE!!!!!" : "Faltam " + diasFaltantes + " dias para o próximo aniversário:");
 
+                Console.WriteLine();
+                Console.WriteLine("Pressione qualquer tecla para continuar...");
                 Console.ReadKey();
             }
-
         }
 
         private string recebeStringTela()
